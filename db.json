@@ -51,7 +51,9 @@
       "author": "Sonia Sotomayor"
     },
     {
-      "quoteId": 2,
+      "quote": "Learn.Love.Code.",
+      "author": "author4",
+      "likes": [],
       "id": 11
     }
   ],
@@ -192,26 +194,6 @@
     {
       "quoteId": 3,
       "id": 34
-    },
-    {
-      "quoteId": 11,
-      "id": 35
-    },
-    {
-      "quoteId": 11,
-      "id": 36
-    },
-    {
-      "quoteId": 11,
-      "id": 37
-    },
-    {
-      "quoteId": 11,
-      "id": 38
-    },
-    {
-      "quoteId": 11,
-      "id": 39
     },
     {
       "quoteId": 1,
