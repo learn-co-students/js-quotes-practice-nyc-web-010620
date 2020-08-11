@@ -89,14 +89,14 @@ document.addEventListener("DOMContentLoaded", e=>{
                let newLikes = likesNumber+1
                likesNumber = newLikes
                 //   debugger
-               let body =  { quoteId: quoteId }
-               
-               let options = {
-                   method: "POST",
-                   headers: 
-                   {"Content-Type": "application/json",
-                   Accept: "application/json"},
-                   body: JSON.stringify(body)
+                let body =  { quoteId: quoteId }
+                
+                let options = {
+                    method: "POST",
+                    headers: 
+                    {"Content-Type": "application/json",
+                    Accept: "application/json"},
+                    body: JSON.stringify(body)
                 }
                 fetch(likes_link, options)
                 .then(res=>res.json())
