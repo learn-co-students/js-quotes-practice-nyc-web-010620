@@ -68,10 +68,11 @@ document.addEventListener("DOMContentLoaded", e=>{
 
         quoteUl.addEventListener("click", e=>{
 
+            
             if(e.target.innerText ==="Delete"){
-
                 let quoteId = e.target.dataset.id
                 let parentLi = e.target.parentNode.parentNode
+                
                 let new_link = `http://localhost:3000/quotes/${quoteId}`
                 const option = {
                     method: "DELETE"
@@ -81,29 +82,32 @@ document.addEventListener("DOMContentLoaded", e=>{
                     parentLi.remove()
                 })
             } else {
-                console.log("likes")
+               let likes_link = `http://localhost:3000/likes`
+
+               let quoteId = parseInt(e.target.parentElement.children[4].dataset.id)
+               let likesNumber = parseInt(e.target.children[0].innerText)
+               let newLikes = likesNumber+1
+               likesNumber = newLikes
+                //   debugger
+               let body =  { quoteId: quoteId }
+               
+               let options = {
+                   method: "POST",
+                   headers: 
+                   {"Content-Type": "application/json",
+                   Accept: "application/json"},
+                   body: JSON.stringify(body)
+                }
+                fetch(likes_link, options)
+                .then(res=>res.json())
+                .then(res =>{
+                    e.target.children[0].innerHTML = newLikes
+               })
             }
         })
-    } //f deleteQuote
+    } //f toogleButtons
     
     toggleButtons()
-    
-    function addLikes(){
-        ul.getElementById("click", e=>{
-            console.log("clicks")
-        })     
-    }
-    
-    addLikes()
-
-
-
-    
-
-    
-
-
-
     
 })//DomLoaded
 
